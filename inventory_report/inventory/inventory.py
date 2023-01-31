@@ -33,7 +33,7 @@ class Inventory:
     @classmethod
     def import_data(cls, file_path, report_type):
         if not file_path.endswith((".csv", ".json", ".xml")):
-            raise ValueError("Formato de arquivo inválido!")
+            raise ValueError("Arquivo inválido")
 
         with open(file_path) as file:
             if file_path.endswith(".csv"):
