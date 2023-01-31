@@ -1,5 +1,6 @@
 import csv
 import json
+import xmltodict
 
 from inventory_report.reports.simple_report import SimpleReport
 from inventory_report.reports.complete_report import CompleteReport
@@ -15,6 +16,10 @@ class Inventory:
 
             elif file_path.endswith(".json"):
                 data = json.load(file)
+
+            else:
+                reader = file.read()
+                data = xmltodict.parse(reader)["dataset"]["record"]
 
         if report_type == "simples":
             return SimpleReport.generate(data)
