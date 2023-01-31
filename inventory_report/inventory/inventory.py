@@ -28,10 +28,13 @@ class Inventory:
         elif report_type == "completo":
             return CompleteReport.generate(data)
         else:
-            raise ValueError("Formato de arquivo inválido!")
+            raise ValueError("Tipo de relatório inválido!")
 
     @classmethod
     def import_data(cls, file_path, report_type):
+        if not file_path.endswith((".csv", ".json", ".xml")):
+            raise ValueError("Formato de arquivo inválido!")
+
         with open(file_path) as file:
             if file_path.endswith(".csv"):
                 data = cls.read_csv(file)
@@ -39,7 +42,7 @@ class Inventory:
             elif file_path.endswith(".json"):
                 data = cls.read_json(file)
 
-            elif file_path.endswith(".xml"):
+            else:
                 data = cls.read_xml(file)
 
         return cls.generate_report(data, report_type)
