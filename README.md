@@ -19,8 +19,7 @@ Fora isso, foi utilizado o framework ***pytest***, para testar classes que já h
 
 1. Navegue até o local onde deseja clonar o repositório e utilize o **git clone**:
 ```
-git clone git@github.com:Tayna-Silva-Macedo/
-project-inventory-report.git
+git clone git@github.com:Tayna-Silva-Macedo/project-inventory-report.git
 ```
 
 2. Acesse o diretório do projeto **
