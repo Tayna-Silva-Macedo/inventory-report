@@ -25,8 +25,7 @@ git clone git@github.com:Tayna-Silva-Macedo/project-inventory-report.git
 2. Acesse o diretório do projeto **
 project-inventory-report**:
 ```
-cd 
-project-inventory-report
+cd project-inventory-report
 ```
 
 3. Crie e ative um ambiente virtual para o projeto:
