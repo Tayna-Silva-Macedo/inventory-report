@@ -22,7 +22,7 @@ class Inventory:
         return xmltodict.parse(reader)["dataset"]["record"]
 
     @classmethod
-    def check_report_type(cls, data, report_type):
+    def generate_report(cls, data, report_type):
         if report_type == "simples":
             return SimpleReport.generate(data)
         elif report_type == "completo":
@@ -43,4 +43,4 @@ class Inventory:
             else:
                 data = cls.read_xml(file)
 
-        return cls.check_report_type(data, report_type)
+        return cls.generate_report(data, report_type)
