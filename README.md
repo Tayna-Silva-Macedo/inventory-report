@@ -47,6 +47,8 @@ pip install .
 ```
 inventory_report <caminho_do_arquivo_input> <tipo_de_relatório>
 ```
+> ℹ️ O tipo de relatório deve ser "simples" ou "completo".
+
 Exemplo: ```inventory_report inventory_report/data/inventory.csv simples```
 
 7. Para rodar os testes é utilizado o seguinte comando:
